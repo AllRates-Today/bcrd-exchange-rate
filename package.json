@@ -1,6 +1,6 @@
 {
   "name": "bcrd-exchange-rate",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Official Banco Central de la República Dominicana (Dominican Republic) daily exchange rates — 14 currencies vs DOP, history since 1991. Zero-dependency Node.js/TypeScript client.",
   "keywords": [
     "bcrd",

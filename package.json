@@ -1,0 +1,57 @@
+{
+  "name": "bcrd-exchange-rate",
+  "version": "1.0.3",
+  "description": "Official Banco Central de la República Dominicana (Dominican Republic) daily exchange rates — 1 currencies vs DOP, history since 1991. Zero-dependency Node.js/TypeScript client.",
+  "keywords": [
+    "bcrd",
+    "banco",
+    "central",
+    "de",
+    "la",
+    "república",
+    "dominicana",
+    "exchange-rate",
+    "exchange-rates",
+    "currency",
+    "forex",
+    "fx",
+    "dop",
+    "central-bank",
+    "official-rates",
+    "dominican-republic",
+    "api",
+    "typescript"
+  ],
+  "homepage": "https://allratestoday.com/central-bank-rates-api/bcrd/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllRates-Today/bcrd-exchange-rate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AllRates-Today/bcrd-exchange-rate/issues"
+  },
+  "license": "MIT",
+  "author": "AllRatesToday <hello@allratestoday.com> (https://allratestoday.com)",
+  "type": "module",
+  "main": "./index.cjs",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    }
+  },
+  "files": [
+    "index.mjs",
+    "index.cjs",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false
+}

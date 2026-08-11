@@ -1,6 +1,6 @@
 # Banco Central de la República Dominicana Exchange Rate API client
 
-Official **Banco Central de la República Dominicana** (the Dominican Republic) daily exchange rates in Node.js / TypeScript — 1 currencies against the DOP, with history back to 1991. Zero dependencies, works in Node 18+, Bun, Deno, and edge runtimes (uses global `fetch`).
+Official **Banco Central de la República Dominicana** (the Dominican Republic) daily exchange rates in Node.js / TypeScript — 14 currencies against the DOP, with history back to 1991. Zero dependencies, works in Node 18+, Bun, Deno, and edge runtimes (uses global `fetch`).
 
 These are the *published central bank rates* required for tax filings, customs valuations, audits, and compliant invoicing — not moving market rates. Every response carries the publisher's own publication date.
 
@@ -44,9 +44,9 @@ const series = await getHistory(
 
 ## Currencies covered
 
-Banco Central de la República Dominicana currently publishes rates covering **2 currencies** (as of the latest table):
+Banco Central de la República Dominicana currently publishes rates covering **15 currencies** (as of the latest table):
 
-`DOP` · `USD`
+`AUD` · `BRL` · `CAD` · `CHF` · `CNY` · `DKK` · `DOP` · `EUR` · `GBP` · `JPY` · `NOK` · `SEK` · `USD` · `VES` · `XDR`
 
 Pairs the central bank does not print directly are resolved from this table (see below).
 

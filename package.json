@@ -1,14 +1,14 @@
 {
   "name": "bcrd-exchange-rate",
-  "version": "1.1.1",
-  "description": "Official Banco Central de la Rep\u00fablica Dominicana (Dominican Republic) daily exchange rates \u2014 1 currencies vs DOP, history since 1991. Zero-dependency Node.js/TypeScript client.",
+  "version": "1.1.2",
+  "description": "Official Banco Central de la República Dominicana (Dominican Republic) daily exchange rates — 14 currencies vs DOP, history since 1991. Zero-dependency Node.js/TypeScript client.",
   "keywords": [
     "bcrd",
     "banco",
     "central",
     "de",
     "la",
-    "rep\u00fablica",
+    "república",
     "dominicana",
     "exchange-rate",
     "exchange-rates",

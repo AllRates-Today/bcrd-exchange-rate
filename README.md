@@ -70,11 +70,11 @@ const pair = await getRate('USD', 'DOP', { apiKey: 'art_live_...' });
 {
   bank: 'bcrd',
   name: 'Banco Central de la República Dominicana',
-  rate_date: '2026-08-10',   // Banco Central de la República Dominicana's own publication date
+  rate_date: '2026-09-08',   // Banco Central de la República Dominicana's own publication date
   source: 'USD',
   target: 'DOP',
-  rate: 58.199,
-  rate_type: 'reference',
+  rate: 58.8666,
+  rate_type: 'sell',
   derived: false,
   method: 'published',
   disclaimer: '…'
@@ -98,11 +98,10 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'bcrd',
   name: 'Banco Central de la República Dominicana',
-  rate_date: '2026-08-10',
+  rate_date: '2026-09-08',
   rates: [
-    { "base": "USD", "quote": "DOP", "type": "reference", "value": 58.199 },
-    { "base": "USD", "quote": "DOP", "type": "sell", "value": 58.5403 },
-    { "base": "USD", "quote": "DOP", "type": "buy", "value": 58.199 },
+    { "base": "USD", "quote": "DOP", "type": "sell", "value": 58.8666 },
+    { "base": "USD", "quote": "DOP", "type": "buy", "value": 58.6307 },
     // … the rest of the published table (14 currencies vs DOP)
   ],
   disclaimer: '…'
@@ -142,7 +141,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'bcrd-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'DOP', from: '2026-01-01', to: '2026-08-10' },
+  { source: 'USD', target: 'DOP', from: '2026-01-01', to: '2026-09-08' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -155,11 +154,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'DOP',
   from: '2026-01-01',
-  to: '2026-08-10',
+  to: '2026-09-08',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-08-10', rate: 58.199, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-09-08', rate: 58.8666, rate_type: 'sell', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -172,9 +171,9 @@ Pass `{ symbol: 'USD' }` instead of `source`/`target` to get the raw published r
 
 ## 🗺️ Currencies covered
 
-Banco Central de la República Dominicana currently publishes rates covering **15 currencies** (as of the latest table):
+Banco Central de la República Dominicana currently publishes rates covering **14 currencies** against the DOP (as of the latest table):
 
-`AUD` · `BRL` · `CAD` · `CHF` · `CNY` · `DKK` · `DOP` · `EUR` · `GBP` · `JPY` · `NOK` · `SEK` · `USD` · `VES` · `XDR`
+🇦🇺 `AUD` · 🇧🇷 `BRL` · 🇨🇦 `CAD` · 🇨🇭 `CHF` · 🇨🇳 `CNY` · 🇩🇰 `DKK` · 🇪🇺 `EUR` · 🇬🇧 `GBP` · 🇯🇵 `JPY` · 🇳🇴 `NOK` · 🇸🇪 `SEK` · 🇺🇸 `USD` · 🇻🇪 `VES` · `XDR`
 
 ## ⚖️ Published vs derived rates
 
@@ -237,6 +236,14 @@ getRate('USD', 'DOP', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 | `getLatestRates({ apiKey })` | Free | The central bank's full latest published table |
 | `getRatesForDate(date, { apiKey, source?, target? })` | Paid | The official table (or one pair) for a YYYY-MM-DD date |
 | `getHistory({ symbol \| source+target, from?, to? }, { apiKey })` | Paid | Daily series since 1991 |
+
+## 📥 Bulk data (no key)
+
+Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
+
+- Hugging Face: [AllRates/central-bank-exchange-rates](https://huggingface.co/datasets/AllRates/central-bank-exchange-rates) — one CSV per institution (`rates/bcrd.csv`)
+- Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
+- CDN JSON: `https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/bcrd/latest.json`
 
 ## 🔗 Links
 

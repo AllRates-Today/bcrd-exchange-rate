@@ -85,10 +85,10 @@ const pair = await getRate('USD', 'DOP', { apiKey: 'art_live_...' });
 {
   bank: 'bcrd',
   name: 'Banco Central de la República Dominicana',
-  rate_date: '2026-09-08',   // Banco Central de la República Dominicana's own publication date
+  rate_date: '2026-09-25',   // Banco Central de la República Dominicana's own publication date
   source: 'USD',
   target: 'DOP',
-  rate: 58.8666,
+  rate: 59.645,
   rate_type: 'sell',
   derived: false,
   method: 'published',
@@ -113,10 +113,10 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'bcrd',
   name: 'Banco Central de la República Dominicana',
-  rate_date: '2026-09-08',
+  rate_date: '2026-09-25',
   rates: [
-    { "base": "USD", "quote": "DOP", "type": "sell", "value": 58.8666 },
-    { "base": "USD", "quote": "DOP", "type": "buy", "value": 58.6307 },
+    { "base": "USD", "quote": "DOP", "type": "sell", "value": 59.645 },
+    { "base": "USD", "quote": "DOP", "type": "buy", "value": 59.277 },
     // … the rest of the published table (14 currencies vs DOP)
   ],
   disclaimer: '…'
@@ -156,7 +156,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'bcrd-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'DOP', from: '2026-01-01', to: '2026-09-08' },
+  { source: 'USD', target: 'DOP', from: '2026-01-01', to: '2026-09-25' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -169,11 +169,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'DOP',
   from: '2026-01-01',
-  to: '2026-09-08',
+  to: '2026-09-25',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-09-08', rate: 58.8666, rate_type: 'sell', derived: false, method: 'published' },
+    { date: '2026-09-25', rate: 59.645, rate_type: 'sell', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'

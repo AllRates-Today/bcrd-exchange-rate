@@ -40,12 +40,12 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 Today's full Banco Central de la República Dominicana table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-08** by Banco Central de la República Dominicana — 2 rates. Updated 2026-10-08.
+Published **2026-10-09** by Banco Central de la República Dominicana — 2 rates. Updated 2026-10-09.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| USD | DOP | buy | 61.1707 |
-| USD | DOP | sell | 61.6732 |
+| USD | DOP | buy | 61.1168 |
+| USD | DOP | sell | 61.8247 |
 
 Source: [Official rates published by BCRD, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/bcrd/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->

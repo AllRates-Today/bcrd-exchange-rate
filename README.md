@@ -43,12 +43,12 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-16 by Banco Central de la República Dominicana — 2 rates. Updated 2026-10-19.</summary>
+<summary>Table as text: published 2026-10-19 by Banco Central de la República Dominicana — 2 rates. Updated 2026-10-19.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| USD | DOP | buy | 61.3649 |
-| USD | DOP | sell | 61.8322 |
+| USD | DOP | buy | 61.2304 |
+| USD | DOP | sell | 61.6227 |
 
 </details>
 
